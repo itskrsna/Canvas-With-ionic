@@ -1,0 +1,281 @@
+page-home {
+    #container{
+        height: 700px;
+    }
+#dial {
+    width: 170px;
+    height: 170px;
+    margin: 0px auto 20px;
+    border-radius: 50%;
+    border: 10px solid #31B5BB;
+}
+#dial #usage-container {
+    font-family: Roboto-Regular, -apple-system, "Helvetica Neue", sans-serif;
+    font-size: 32px;
+    color: #9B9B9B;
+    letter-spacing: 0px;
+    margin-top: 35px;
+    text-align: center;
+}
+#dial #date {
+    font-family: Roboto-Regular, -apple-system, "Helvetica Neue", sans-serif;
+    font-size: 21.2px;
+    color: #3CB9B0;
+    letter-spacing: 0px;
+    text-align: center;
+}
+#dial #temp {
+    font-family: Roboto-Regular, -apple-system, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    color: #4A4A4A;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.kwh {
+    font-family: Roboto-Regular, -apple-system, "Helvetica Neue", sans-serif;
+    font-size: 19px;
+    color: #9B9B9B;
+    letter-spacing: 0px;
+    margin-left: -12px;
+}
+.chart {
+    height: 100%;
+    margin: 30px auto 0px;
+}
+div.bar{
+    display: inline-block;
+    width: 20px;
+    height: 75px;
+    background-color: teal;
+}
+
+.weather-chart path{
+    fill:#FFAD27;
+    fill-opacity: 0.5;
+}
+
+circle {
+    fill: #58D6C7;
+}
+
+.usage-chart path{
+    fill:none;
+    stroke:#58D6C7;
+    stroke-width: 2px;
+}
+g.axis path {
+    stroke-width: 0;
+}
+#svg-bars{
+        width:500px;
+        margin:0 auto;
+}
+.axis-cost,.cost-bar{
+    opacity: 0;
+}
+.axis-cost.on,.cost-bar.on{
+    opacity: 1;
+}
+.area {
+        fill: url(#gradient);
+        fill-opacity: .2;
+        clip-path: url(#clip);
+}
+
+    .zoom {
+        cursor: move;
+        fill: none;
+        pointer-events: all;
+    }
+    .line {
+        fill: none;
+        stroke: #31B5BB;
+        stroke-width: 2px;
+        clip-path: url(#clip);
+    }
+    
+    .circle {
+            fill: transparent;
+            stroke: none;
+            stroke-width: 2px;
+            clip-path: url(#clip);
+    }
+    .circle.selected{
+        fill: #31B5BB;
+        stroke: #777777;
+    }
+            .zeroline {
+            fill: none;
+            stroke: red;
+            stroke-width: 0.5px;
+            stroke-dasharray: 5 5;
+        }
+
+        .zerolinetext {
+            fill: red;
+        }
+
+        .overlay {
+            fill: none;
+            stroke: none;
+            pointer-events: all;
+        }
+
+        .focusLine {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 0.5px;
+        }
+
+        .focusCircle {
+            fill: red;
+        }
+
+.weather-chart{
+        fill:#FFAD27;
+        fill-opacity: 0.5;
+        clip-path: url(#clip);
+    }
+.weather-chart.line{
+    fill:none;
+    stroke: #FFAD27;
+    stroke-width:2px;
+}
+.axis g.tick text {
+    fill: #777777;
+}
+ion-segment.usage {
+    padding: 0 34px 34px;
+}
+ion-segment.usage .segment-button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #58D6C7;
+    color: #31B5BB;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Roboto-Regular, -apple-system, "Helvetica Neue", sans-serif;
+}
+.segment-button:first-of-type {
+    margin-right: 0;
+    border-radius: 4px 0 0 4px;
+}
+ion-segment.usage .segment-button:not(:first-of-type) {
+    border-left-width: 0;
+}
+ion-segment.usage .segment-button.segment-activated {
+    background-color: #31B5BB;
+    color: #fff;
+}
+.segment-button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 0;
+    height: 3.2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #387ef5;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    color: #387ef5;
+    background-color: transparent;
+}
+.segment-button {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+ion-segment.usage .segment-button.segment-activated{
+    background-color: #31B5BB;
+    color: #fff;
+}
+
+ion-segment.usage .segment-button:not(:first-of-type){
+    border-left-width: 0;
+}
+
+div#chart-assistant {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #777777;
+}
+
+.year {
+    font-family: Roboto-Regular;
+    font-size: 22px;
+}
+
+.month {
+    font-size: 30px;
+}
+
+rect.cost-bar{
+    fill: url(#bar-gradient);
+    clip-path: url(#clip);
+}
+
+
+.brite-tooltip {
+    position: absolute;
+    text-align: center;
+    width: 132px;
+    height: 62px;
+    padding: 6px;
+    font: 12px sans-serif;
+    border: 0px;
+    pointer-events: none;
+    background: #FFFFFF;
+    border: 0px solid rgba(210,210,210,0.93);
+    box-shadow: 0px 0px 5px 0px #D2D2D2;
+    border-radius: 2.86px;
+    box-sizing: border-box;
+    clip-path: url(#clip);
+}
+.brite-tooltip::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -17px;
+    left: 45%;
+    box-sizing: border-box;
+    border: 10px solid black;
+    border-color: transparent transparent #ffffff #ffffff;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.brite-tooltip-content.date {
+    font-family: Roboto-Medium;
+    font-size: 12px;
+    color: #777777;
+    letter-spacing: 0.74px;
+}
+.brite-tooltip-content.kwh-cost {
+    font-family: Roboto-Medium;
+    font-size: 11px;
+    color: #777777;
+    letter-spacing: 0.66px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+.brite-tooltip-content.temp {
+    font-family: Roboto-Regular;
+    font-size: 11px;
+    color: #777777;
+    letter-spacing: 0.59px;
+    margin-top: 3px;
+}
+}
